@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Sun, ChevronDown } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { SERVICES, COMPANY_INFO } from '../constants';
 
@@ -50,8 +50,12 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-            <div className="w-10 h-10 bg-gradient-to-br from-primary to-secondary rounded-lg flex items-center justify-center text-white">
-                <Sun size={24} strokeWidth={2.5} />
+            <div className="w-10 h-10 rounded-lg overflow-hidden bg-white/80 flex items-center justify-center">
+              <img
+                src="/official_image/logo.png"
+                alt={`${COMPANY_INFO.name} Logo`}
+                className="w-full h-full object-contain p-1"
+              />
             </div>
             <div className="flex flex-col">
                 <span className={`font-bold text-xl tracking-wide ${isScrolled || location.pathname !== '/' ? 'text-gray-800' : 'text-gray-900 lg:text-white'}`}>

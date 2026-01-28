@@ -69,6 +69,21 @@ const ServiceDetail: React.FC = () => {
                                     </div>
                                 )}
 
+                                {/* Images Block Render (Multiple) */}
+                                {Array.isArray((block as any).images) && (block as any).images.length > 0 && (
+                                    <div className="my-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                        {(block as any).images.map((src: string, i: number) => (
+                                            <div key={`${src}-${i}`} className="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-white">
+                                                <img
+                                                    src={src}
+                                                    alt={`${block.subtitle}-${i + 1}`}
+                                                    className="w-full h-auto object-cover"
+                                                />
+                                            </div>
+                                        ))}
+                                    </div>
+                                )}
+
                                 {/* Process Flow Chart Render */}
                                 {block.list && block.type === 'process' && (
                                     <div className="mt-8 relative pb-2">

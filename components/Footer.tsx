@@ -1,5 +1,4 @@
 import React from 'react';
-import { Sun } from 'lucide-react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { COMPANY_INFO, NAV_LINKS, SERVICES } from '../constants';
 
@@ -40,7 +39,13 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-white">
-                <Sun className="text-secondary" size={32} />
+                <div className="w-9 h-9 rounded-lg overflow-hidden bg-white/90 flex items-center justify-center">
+                  <img
+                    src="/official_image/logo.png"
+                    alt={`${COMPANY_INFO.name} Logo`}
+                    className="w-full h-full object-contain p-1"
+                  />
+                </div>
                 <div className="flex flex-col">
                     <span className="font-bold text-xl tracking-wide">{COMPANY_INFO.name}</span>
                     <span className="text-[0.6rem] tracking-widest text-gray-400">{COMPANY_INFO.englishName}</span>
