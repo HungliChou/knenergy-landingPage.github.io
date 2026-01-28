@@ -17,17 +17,22 @@ const Portfolio: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {PROJECTS.map((project) => (
             <div key={project.id} className="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-300">
-              <div className="relative h-64 overflow-hidden">
-                <div className="grid grid-cols-2 h-full">
-                  {project.images?.slice(0, 2).map((src, idx) => (
-                    <div key={`${project.id}-${idx}`} className="overflow-hidden">
-                      <img
-                        src={src}
-                        alt={`${project.title}-${idx + 1}`}
-                        className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
-                      />
-                    </div>
-                  ))}
+              <div className="relative overflow-hidden bg-gray-50">
+                <div className="p-2">
+                  <div className="grid grid-cols-1 gap-2">
+                    {project.images?.slice(0, 2).map((src, idx) => (
+                      <div
+                        key={`${project.id}-${idx}`}
+                        className="relative w-full aspect-[4/3] rounded-lg overflow-hidden bg-white border border-gray-100"
+                      >
+                        <img
+                          src={src}
+                          alt={`${project.title}-${idx + 1}`}
+                          className="w-full h-full object-contain"
+                        />
+                      </div>
+                    ))}
+                  </div>
                 </div>
                 <div className="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-3 py-1 m-4 rounded-full">
                     {project.capacity}

@@ -203,9 +203,9 @@ export const SERVICES = [
         image: withBase("official_image/太陽能板回收2.png")
       },
       {
-        subtitle: "物質成分與環境安全 (Page 15)",
+        subtitle: "物質成分與環境安全",
         text: "外界常誤解太陽能板有毒，事實上，太陽能模組主要由玻璃 (約74.2%)、鋁框 (約10.3%)、聚合物 (約10%) 等一般材料組成，僅含極少量的導電金屬。\n\n經檢測證明，廢棄模組符合「毒性特性溶出程序 (TCLP)」標準，不屬於有害事業廢棄物。其成分穩定，不會自行溶解或滲出液體污染土壤與地下水。透過專業回收技術，玻璃、鋁框等材料皆可高比例回收再製，真正實現綠色能源的永續循環。",
-        image: "https://picsum.photos/id/1082/800/450" // Placeholder for Page 15
+        // 此段落不顯示圖片
       }
     ],
     detailImage: "https://picsum.photos/id/439/800/500",

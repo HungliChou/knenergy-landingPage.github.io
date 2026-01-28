@@ -39,11 +39,11 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-white">
-                <div className="w-9 h-9 rounded-lg overflow-hidden bg-white/90 flex items-center justify-center">
+                <div className="w-9 h-9 flex items-center justify-center">
                   <img
                     src={`${import.meta.env.BASE_URL}official_image/logo.png`}
                     alt={`${COMPANY_INFO.name} Logo`}
-                    className="w-full h-full object-contain p-1"
+                    className="w-full h-full object-contain"
                   />
                 </div>
                 <div className="flex flex-col">
