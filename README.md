@@ -29,8 +29,7 @@ View your app in AI Studio: https://ai.studio/apps/drive/1mzky9ZguJXkEqjB3JLdJsm
 
 1. **首次設定**（只需一次）：
    - 到 GitHub 專案 → Settings → Pages
-   - Source 選擇 `Deploy from a branch`
-   - Branch 選擇 `gh-pages` / `(root)`
+   - Source 選擇 `GitHub Actions`
    - 點 Save
 
 2. **之後每次更新**：
@@ -38,7 +37,7 @@ View your app in AI Studio: https://ai.studio/apps/drive/1mzky9ZguJXkEqjB3JLdJsm
    - `git add .`
    - `git commit -m "你的更新訊息"`
    - `git push origin main`
-   - **完成！** GitHub Actions 會自動 build 並部署到 `gh-pages` 分支
+   - **完成！** GitHub Actions 會自動 build 並部署到 GitHub Pages
    - 等待 1-2 分鐘，網站會自動更新
 
 ### 📦 手動部署（可選）
@@ -47,6 +46,6 @@ View your app in AI Studio: https://ai.studio/apps/drive/1mzky9ZguJXkEqjB3JLdJsm
 
 1. 安裝依賴：`npm install`
 2. 產出靜態檔：`npm run build`
-3. 部署到 `gh-pages` 分支：`npm run deploy`
+3. 部署到 GitHub Pages：交給 GitHub Actions（建議），或維持你自己的部署流程
 
 完成後，GitHub Pages 會用 `dist/` 產出的靜態檔提供網站服務。

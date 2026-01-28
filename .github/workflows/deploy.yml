@@ -7,7 +7,9 @@ on:
   workflow_dispatch: # 允許手動觸發
 
 permissions:
-  contents: write
+  contents: read
+  pages: write
+  id-token: write
 
 jobs:
   build-and-deploy:
@@ -15,8 +17,6 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0 # 需要完整歷史記錄來部署到 gh-pages
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -33,12 +33,14 @@ jobs:
           # 如果需要的話，可以在 GitHub Secrets 設定 GEMINI_API_KEY
           # GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
-      - name: Configure Git
-        run: |
-          git config --global user.name "github-actions[bot]"
-          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
 
-      - name: Deploy to gh-pages
-        run: npm run deploy
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
