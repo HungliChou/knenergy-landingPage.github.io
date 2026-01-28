@@ -1,9 +1,40 @@
-import React from 'react';
+import React, { useMemo, useState } from 'react';
 import { Phone, Mail, MapPin, Printer, ArrowLeft } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { COMPANY_INFO } from '../constants';
 
 const Contact: React.FC = () => {
+  const [hasTriedSubmit, setHasTriedSubmit] = useState(false);
+  const [errors, setErrors] = useState<Record<string, string>>({});
+
+  const phonePattern = useMemo(
+    () => /^(09\d{2}-?\d{3}-?\d{3}|0\d{1,2}-?\d{3,4}-?\d{3,4}|\+\d{6,15})$/,
+    []
+  );
+
+  const validate = (fd: FormData) => {
+    const next: Record<string, string> = {};
+
+    const name = String(fd.get('name') ?? '').trim();
+    const salutation = String(fd.get('salutation') ?? '').trim();
+    const phone = String(fd.get('phone') ?? '').trim();
+    const addressArea = String(fd.get('address_area') ?? '').trim();
+    const buildingType = String(fd.get('building_type') ?? '').trim();
+    const need = String(fd.get('need') ?? '').trim();
+
+    if (!name) next.name = '請填寫您的稱呼';
+    if (!salutation) next.salutation = '請選擇性別';
+    if (!phone) next.phone = '請填寫聯絡電話';
+    else if (!phonePattern.test(phone)) {
+      next.phone = '電話格式不正確，請輸入台灣手機/市話或含國碼的國外電話';
+    }
+    if (!addressArea) next.address_area = '請填寫建物地址（縣市/區域）';
+    if (!buildingType) next.building_type = '請選擇建物類型';
+    if (!need) next.need = '請選擇諮詢需求';
+
+    return next;
+  };
+
   return (
     <section className="pt-32 pb-24 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -78,6 +109,16 @@ const Contact: React.FC = () => {
               className="space-y-5"
               action={`https://formsubmit.co/${encodeURIComponent('leochou2ha@gmail.com')}`}
               method="POST"
+              noValidate
+              onSubmit={(e) => {
+                setHasTriedSubmit(true);
+                const fd = new FormData(e.currentTarget);
+                const next = validate(fd);
+                setErrors(next);
+                if (Object.keys(next).length > 0) {
+                  e.preventDefault();
+                }
+              }}
             >
                 {/* FormSubmit options */}
                 <input type="hidden" name="_subject" value="【官網表單】安裝諮詢" />
@@ -91,10 +132,12 @@ const Contact: React.FC = () => {
                         <input
                           type="text"
                           name="name"
-                          required
                           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                           placeholder="王大明"
                         />
+                        {hasTriedSubmit && errors.name && (
+                          <p className="mt-1 text-sm text-red-600">{errors.name}</p>
+                        )}
                     </div>
                      <div>
                         <label className="block text-sm font-medium text-gray-700 mb-1">性別</label>
@@ -102,9 +145,13 @@ const Contact: React.FC = () => {
                           name="salutation"
                           className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                         >
+                            <option value="">請選擇</option>
                             <option value="先生">先生</option>
                             <option value="小姐">小姐</option>
                         </select>
+                        {hasTriedSubmit && errors.salutation && (
+                          <p className="mt-1 text-sm text-red-600">{errors.salutation}</p>
+                        )}
                     </div>
                 </div>
                 
@@ -113,10 +160,12 @@ const Contact: React.FC = () => {
                     <input
                       type="tel"
                       name="phone"
-                      required
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                      placeholder="0912-345-678"
+                      placeholder="例如：0912-345-678 或 +81-90-1234-5678"
                     />
+                    {hasTriedSubmit && errors.phone && (
+                      <p className="mt-1 text-sm text-red-600">{errors.phone}</p>
+                    )}
                 </div>
 
                 <div>
@@ -124,10 +173,12 @@ const Contact: React.FC = () => {
                     <input
                       type="text"
                       name="address_area"
-                      required
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                       placeholder="例如：新北市中和區"
                     />
+                    {hasTriedSubmit && errors.address_area && (
+                      <p className="mt-1 text-sm text-red-600">{errors.address_area}</p>
+                    )}
                 </div>
 
                 <div>
@@ -136,19 +187,23 @@ const Contact: React.FC = () => {
                       name="building_type"
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                     >
+                        <option value="">請選擇</option>
                         <option value="工廠">工廠</option>
                         <option value="畜(禽)舍">畜(禽)舍</option>
                         <option value="大樓/公寓">大樓/公寓</option>
                         <option value="土地">土地</option>
                         <option value="其他">其他</option>
                     </select>
+                    {hasTriedSubmit && errors.building_type && (
+                      <p className="mt-1 text-sm text-red-600">{errors.building_type}</p>
+                    )}
                 </div>
                 
                 <div>
                     <label className="block text-sm font-medium text-gray-700 mb-3">諮詢需求</label>
                     <div className="space-y-3">
                          <label className="flex items-start gap-3 cursor-pointer p-3 border border-gray-100 rounded-lg hover:bg-gray-50 hover:border-primary/30 transition-all">
-                            <input type="radio" name="need" value="屋頂出租(承租)" required className="mt-1.5 text-primary focus:ring-primary w-4 h-4" />
+                            <input type="radio" name="need" value="屋頂出租(承租)" className="mt-1.5 text-primary focus:ring-primary w-4 h-4" />
                             <div>
                                 <span className="block text-gray-900 font-bold mb-1">屋頂出租(承租)</span>
                                 <span className="block text-sm text-gray-500 leading-relaxed">
@@ -157,7 +212,7 @@ const Contact: React.FC = () => {
                             </div>
                         </label>
                         <label className="flex items-start gap-3 cursor-pointer p-3 border border-gray-100 rounded-lg hover:bg-gray-50 hover:border-primary/30 transition-all">
-                            <input type="radio" name="need" value="自建" required className="mt-1.5 text-primary focus:ring-primary w-4 h-4" />
+                            <input type="radio" name="need" value="自建" className="mt-1.5 text-primary focus:ring-primary w-4 h-4" />
                              <div>
                                 <span className="block text-gray-900 font-bold mb-1">自建</span>
                                 <span className="block text-sm text-gray-500 leading-relaxed">
@@ -166,6 +221,9 @@ const Contact: React.FC = () => {
                             </div>
                         </label>
                     </div>
+                    {hasTriedSubmit && errors.need && (
+                      <p className="mt-2 text-sm text-red-600">{errors.need}</p>
+                    )}
                 </div>
 
                 <div>
