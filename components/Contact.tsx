@@ -73,9 +73,10 @@ const Contact: React.FC = () => {
           <div className="bg-white rounded-2xl shadow-xl p-8 lg:p-10 border-t-8 border-primary">
             <h3 className="text-2xl font-bold text-gray-900 mb-6">安裝諮詢表單</h3>
             {/* 使用 FormSubmit（免費）直接寄送到指定 Email，不需後端 */}
+            {/* 測試用 email，不影響頁面顯示的聯絡資訊 */}
             <form
               className="space-y-5"
-              action={`https://formsubmit.co/${encodeURIComponent(COMPANY_INFO.email)}`}
+              action={`https://formsubmit.co/${encodeURIComponent('leochou2ha@gmail.com')}`}
               method="POST"
             >
                 {/* FormSubmit options */}
