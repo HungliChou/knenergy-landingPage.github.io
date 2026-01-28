@@ -29,9 +29,6 @@ jobs:
 
       - name: Build
         run: npm run build
-        env:
-          # 如果需要的話，可以在 GitHub Secrets 設定 GEMINI_API_KEY
-          # GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
