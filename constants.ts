@@ -1,5 +1,7 @@
 import { Sun, ShieldCheck, Wrench, Leaf, BarChart3, Recycle, FileCheck, HardHat } from 'lucide-react';
 
+const withBase = (p: string) => `${import.meta.env.BASE_URL}${p.replace(/^\/+/, '')}`;
+
 export const COMPANY_INFO = {
   name: "旭奇能源",
   englishName: "KW ENERGY CO.",
@@ -71,8 +73,8 @@ export const SERVICES = [
         subtitle: "建置類型",
         text: "我們提供多種建置型態，包括「平鋪型」（具備隔熱降溫，解決屋頂漏水）與「棚架型」（設置於RC屋頂，立柱使用H型鋼，增加使用空間）。",
         images: [
-          "/official_image/太陽光電系統建置- 平鋪型.png",
-          "/official_image/太陽光電系統建置-棚架型.png"
+          withBase("official_image/太陽光電系統建置- 平鋪型.png"),
+          withBase("official_image/太陽光電系統建置-棚架型.png")
         ]
       }
     ],
@@ -186,7 +188,7 @@ export const SERVICES = [
       {
         subtitle: "法規與預繳機制",
         text: "為解決太陽能光電模組除役後的廢棄物問題，政府已建立完整的回收制度。依照《再生能源發展條例》相關規定，設置者在案場建置時，需預繳每瓩 (kW) 1,000 元的回收清理費用。此費用納入政府信託基金，專款專用於未來的回收處理，確保每一片模組都能妥善進入循環體系，不造成環境負擔。",
-        image: "/official_image/太陽能板回收1.png"
+        image: withBase("official_image/太陽能板回收1.png")
       },
       {
         subtitle: "回收作業四步驟：3C1R",
@@ -198,7 +200,7 @@ export const SERVICES = [
           "集 (Collect)：累積數量達 50 片以上者，系統將媒合清理業者前往載運；未達 50 片者，可自行送至指定暫存點。",
           "收 (Clearance)：由合法的處理機構進行收運，並進行後續的拆解、破碎與資源化再利用工作。"
         ],
-        image: "/official_image/太陽能板回收2.png"
+        image: withBase("official_image/太陽能板回收2.png")
       },
       {
         subtitle: "物質成分與環境安全 (Page 15)",
@@ -215,28 +217,28 @@ export const PROJECTS = [
     id: 1,
     title: "彰化和美",
     capacity: "8.88 kw",
-    images: ["/official_image/彰化和美1.png", "/official_image/彰化和美2.png"],
+    images: [withBase("official_image/彰化和美1.png"), withBase("official_image/彰化和美2.png")],
     description: "透天厝屋頂棚架型系統"
   },
   {
     id: 2,
     title: "彰化溪湖",
     capacity: "18.5 kw",
-    images: ["/official_image/彰化溪湖1.png", "/official_image/彰化溪湖2.png"],
+    images: [withBase("official_image/彰化溪湖1.png"), withBase("official_image/彰化溪湖2.png")],
     description: "住商混合屋頂平鋪與棚架複合型"
   },
   {
     id: 3,
     title: "彰化福興",
     capacity: "25.2 kw",
-    images: ["/official_image/彰化福興1.png", "/official_image/彰化福興2.png"],
+    images: [withBase("official_image/彰化福興1.png"), withBase("official_image/彰化福興2.png")],
     description: "大型透天厝屋頂利用"
   },
   {
     id: 4,
     title: "彰化鹿港",
     capacity: "121.44 kw",
-    images: ["/official_image/彰化鹿港1.png", "/official_image/彰化鹿港2.png"],
+    images: [withBase("official_image/彰化鹿港1.png"), withBase("official_image/彰化鹿港2.png")],
     description: "廠房倉庫大型屋頂平鋪系統"
   },
 ];
