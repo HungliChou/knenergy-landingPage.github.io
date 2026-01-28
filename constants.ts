@@ -73,8 +73,8 @@ export const SERVICES = [
         subtitle: "建置類型",
         text: "我們提供多種建置型態，包括「平鋪型」（具備隔熱降溫，解決屋頂漏水）與「棚架型」（設置於RC屋頂，立柱使用H型鋼，增加使用空間）。",
         images: [
-          withBase("official_image/太陽光電系統建置- 平鋪型.png"),
-          withBase("official_image/太陽光電系統建置-棚架型.png")
+          { src: withBase("official_image/平鋪型.png"), label: "平鋪型" },
+          { src: withBase("official_image/棚架型.png"), label: "棚架型" }
         ]
       }
     ],

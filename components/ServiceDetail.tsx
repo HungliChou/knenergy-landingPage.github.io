@@ -3,6 +3,8 @@ import { useParams, Link } from 'react-router-dom';
 import { SERVICES } from '../constants';
 import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 
+type ImageItem = { src: string; label?: string };
+
 const ServiceDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
   const service = SERVICES.find(s => s.id === id);
@@ -72,15 +74,28 @@ const ServiceDetail: React.FC = () => {
                                 {/* Images Block Render (Multiple) */}
                                 {Array.isArray((block as any).images) && (block as any).images.length > 0 && (
                                     <div className="my-6 grid grid-cols-1 sm:grid-cols-2 gap-4">
-                                        {(block as any).images.map((src: string, i: number) => (
-                                            <div key={`${src}-${i}`} className="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-white">
-                                                <img
-                                                    src={src}
-                                                    alt={`${block.subtitle}-${i + 1}`}
-                                                    className="w-full h-auto object-cover"
-                                                />
-                                            </div>
-                                        ))}
+                                        {(block as any).images.map((item: string | ImageItem, i: number) => {
+                                            const normalized: ImageItem =
+                                                typeof item === 'string' ? { src: item } : item;
+
+                                            return (
+                                                <div
+                                                    key={`${normalized.src}-${i}`}
+                                                    className="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-white"
+                                                >
+                                                    <img
+                                                        src={normalized.src}
+                                                        alt={normalized.label || `${block.subtitle}-${i + 1}`}
+                                                        className="w-full h-auto object-cover"
+                                                    />
+                                                    {normalized.label && (
+                                                        <div className="px-4 py-3 text-center text-gray-800 font-semibold border-t border-gray-100 bg-white">
+                                                            {normalized.label}
+                                                        </div>
+                                                    )}
+                                                </div>
+                                            );
+                                        })}
                                     </div>
                                 )}
 
