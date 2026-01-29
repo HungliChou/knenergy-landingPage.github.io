@@ -4,6 +4,9 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>旭奇能源 KW Energy | 全方位能源整合方案</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+TC:wght@100..900&display=swap" rel="stylesheet" />
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
       tailwind.config = {
@@ -17,15 +20,20 @@
               light: '#f9fafb',
             },
             fontFamily: {
-              sans: ['Inter', 'system-ui', 'sans-serif'],
+              /* 對應 __Montserrat_6f5adc / __Noto_Sans_TC_145116 字體版 */
+              sans: ['Montserrat', 'Noto Sans TC', 'ui-sans-serif', 'system-ui', 'sans-serif'],
             }
           }
         }
       }
     </script>
     <style>
+      /* Montserrat + Noto Sans TC 字體版（對應 __Montserrat_* / __Noto_Sans_TC_*） */
       html {
         scroll-behavior: smooth;
+      }
+      body {
+        font-family: "Montserrat", "Noto Sans TC", ui-sans-serif, system-ui, sans-serif;
       }
       .gradient-text {
         background-clip: text;
