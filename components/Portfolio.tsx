@@ -10,7 +10,7 @@ const Portfolio: React.FC = () => {
           <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">工程實績</h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-secondary mx-auto"></div>
           <p className="mt-6 text-gray-600">
-            遍布全台的成功案例，見證我們對品質的堅持
+            全台都有我們的案場，住宅、廠房、學校都有
           </p>
         </div>
 
@@ -35,24 +35,24 @@ const Portfolio: React.FC = () => {
                   </div>
                 </div>
                 <div className="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-3 py-1 m-4 rounded-full">
-                    {project.capacity}
+                  {project.capacity}
                 </div>
               </div>
               <div className="p-6">
                 <h3 className="text-lg font-bold text-gray-900 mb-2 flex items-center gap-2">
-                    <MapPin size={18} className="text-primary" />
-                    {project.title}
+                  <MapPin size={18} className="text-primary" />
+                  {project.title}
                 </h3>
                 <p className="text-sm text-gray-500 border-t pt-3 mt-3 border-gray-100">
-                    {project.description}
+                  {project.description}
                 </p>
               </div>
             </div>
           ))}
         </div>
-        
+
         <div className="text-center mt-12">
-            <p className="text-gray-500 text-sm">※ 更多實績案例歡迎聯繫我們索取。</p>
+          <p className="text-gray-500 text-sm">※ 更多實績案例歡迎聯繫我們索取。</p>
         </div>
       </div>
     </section>

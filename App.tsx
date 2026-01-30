@@ -4,9 +4,11 @@ import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
 import Construction from './components/Construction';
+import RentRoof from './components/RentRoof';
 import Services from './components/Services';
 import Partners from './components/Partners';
 import Portfolio from './components/Portfolio';
+import HomeOptions from './components/HomeOptions';
 import News from './components/News';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
@@ -30,32 +32,34 @@ const ScrollToTop = () => {
 
 // The Home Page Component assembled from sections
 const Home = () => (
-    <>
-        <Hero />
-        <About />
-        <Services />
-        <Partners />
-        <Portfolio />
-    </>
+  <>
+    <Hero />
+    <HomeOptions />
+    <About />
+    <Services />
+    <Partners />
+    <Portfolio />
+  </>
 );
 
 const App: React.FC = () => {
   return (
     <Router>
-        <ScrollToTop />
-        <div className="min-h-screen font-sans bg-white selection:bg-primary selection:text-white">
-          <Navbar />
-          <main>
-            <Routes>
-                <Route path="/" element={<Home />} />
-                <Route path="/construction" element={<Construction />} />
-                <Route path="/services/:id" element={<ServiceDetail />} />
-                <Route path="/news" element={<News />} />
-                <Route path="/contact" element={<Contact />} />
-            </Routes>
-          </main>
-          <Footer />
-        </div>
+      <ScrollToTop />
+      <div className="min-h-screen font-sans bg-white selection:bg-primary selection:text-white">
+        <Navbar />
+        <main>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/rent-roof" element={<RentRoof />} />
+            <Route path="/construction" element={<Construction />} />
+            <Route path="/services/:id" element={<ServiceDetail />} />
+            <Route path="/news" element={<News />} />
+            <Route path="/contact" element={<Contact />} />
+          </Routes>
+        </main>
+        <Footer />
+      </div>
     </Router>
   );
 };

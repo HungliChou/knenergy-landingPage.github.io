@@ -77,12 +77,19 @@ const Navbar: React.FC = () => {
               關於旭奇
             </button>
 
-            {/* Construction Link */}
+            {/* Rent Roof Link */}
+            <Link 
+              to="/rent-roof" 
+              className={`text-sm font-medium hover:text-secondary transition-colors ${isScrolled || location.pathname !== '/' ? 'text-gray-700' : 'text-white'}`}
+            >
+              出租屋頂
+            </Link>
+            {/* Self-build / 自建電廠 Link */}
             <Link 
               to="/construction" 
               className={`text-sm font-medium hover:text-secondary transition-colors ${isScrolled || location.pathname !== '/' ? 'text-gray-700' : 'text-white'}`}
             >
-              建置須知
+              自建電廠
             </Link>
 
             {/* Services Dropdown */}
@@ -144,11 +151,18 @@ const Navbar: React.FC = () => {
               </button>
 
               <Link
+                to="/rent-roof"
+                className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50"
+                onClick={() => setIsOpen(false)}
+              >
+                出租屋頂
+              </Link>
+              <Link
                 to="/construction"
                 className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50"
                 onClick={() => setIsOpen(false)}
               >
-                建置須知
+                自建電廠
               </Link>
               
               {/* Mobile Services Accordion Button */}

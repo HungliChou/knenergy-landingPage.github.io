@@ -16,7 +16,8 @@ export const COMPANY_INFO = {
 // Navbar links - simplified as requested
 export const NAV_LINKS = [
   { name: "關於旭奇", path: "/#about", type: "hash" },
-  { name: "建置須知", path: "/construction", type: "page" },
+  { name: "出租屋頂", path: "/rent-roof", type: "page" },
+  { name: "自建電廠", path: "/construction", type: "page" },
   // Services is handled specially in Navbar as a dropdown
   { name: "最新消息", path: "/news", type: "page" },
   { name: "聯絡我們", path: "/contact", type: "page" },
@@ -28,6 +29,7 @@ export const SERVICES = [
     title: "專業諮詢與規劃",
     description: "提供屋頂出租或自建電廠的專業評估。包含租金試算、投資效益分析，協助企業創造綠色收益。",
     icon: BarChart3,
+    cardBgImage: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=600&q=75",
     // Content derived from PDF Page 4 & 5
     detailTitle: "專業諮詢：出租與自建的效益評估",
     detailContent: [
@@ -51,6 +53,7 @@ export const SERVICES = [
     title: "太陽光電系統建置",
     description: "高品質工程建置，採用H型鋼結構、三層防水保護，確保抗風抗震。包含平鋪型、棚架型及地面型系統。",
     icon: Sun,
+    cardBgImage: "https://images.unsplash.com/photo-1508514177221-188b1cf16e9d?w=600&q=75",
     // Content derived from PDF Page 8, 9, 10
     detailTitle: "高品質工程建置標準",
     detailContent: [
@@ -85,6 +88,7 @@ export const SERVICES = [
     title: "文件申請與規畫",
     description: "代辦台電併聯審查、能源局備案、地方政府免雜照申請，全程掌握進度，確保合法合規。",
     icon: FileCheck,
+    cardBgImage: "https://images.unsplash.com/photo-1586281380349-632531db7ed4?w=600&q=75",
     // Content derived from PDF Page 7
     detailTitle: "繁瑣流程，旭奇為您代辦",
     detailContent: [
@@ -128,6 +132,7 @@ export const SERVICES = [
     title: "系統維運與監控",
     description: "提供20年長期維運，包含雲端監控、定期清洗模組、設備檢修，確保發電效益最佳化。",
     icon: Wrench,
+    cardBgImage: "https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600&q=75",
     // Content derived from PDF Page 11, 12
     detailTitle: "20年長期維運，保障發電收益",
     detailContent: [
@@ -155,6 +160,7 @@ export const SERVICES = [
     title: "儲能系統整合",
     description: "BESS儲能佈局，協助電力自給自足、調節尖離峰用電，提升能源獲利與電力自主權。",
     icon: ShieldCheck,
+    cardBgImage: "https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?w=600&q=75",
     // Content derived from PDF Page 21, 22
     detailTitle: "儲能佈局：BESS 與電力自主",
     detailContent: [
@@ -182,6 +188,7 @@ export const SERVICES = [
     title: "太陽能板回收與永續",
     description: "完善的廢棄太陽能板回收機制，配合環保署政策，確保再生能源循環利用，落實ESG。",
     icon: Recycle,
+    cardBgImage: "https://images.unsplash.com/photo-1509391366360-2e959784a276?w=600&q=75",
     // Content derived from PDF Page 13, 14, 15
     detailTitle: "落實循環經濟，確保環境永續",
     detailContent: [
@@ -246,20 +253,20 @@ export const PROJECTS = [
 export const NEWS_ITEMS = [
   {
     id: 1,
-    date: "2024.03.15",
-    title: "強制設置太陽能條款上路",
-    content: "《再生能源發展條例》修法，新建、增建或改建建築面積達300坪以上，未來必須設置太陽能，若不裝設將無法取得建照與使照。"
-  },
-  {
-    id: 2,
-    date: "2024.02.20",
+    date: "2026.01.16",
     title: "儲能系統重大補助計畫",
     content: "經濟部能源署核定50億元補助計畫，針對「表後儲能」提供補助，每1MWh補助500萬元，鼓勵企業建置自主電源。"
   },
   {
-    id: 3,
-    date: "2024.01.10",
+    id: 2,
+    date: "2025.09.16",
     title: "旭奇與富威電力達成戰略合作",
     content: "旭奇能源與富威電力（正崴集團）簽署合作，保障太陽能案場最低90%發電收購，並推動綠電自由交易。"
   },
+  {
+    id: 3,
+    date: "2025.05.26",
+    title: "強制設置太陽能條款上路",
+    content: "《再生能源發展條例》修法，新建、增建或改建建築面積達300坪以上，未來必須設置太陽能，若不裝設將無法取得建照與使照。"
+  }
 ];

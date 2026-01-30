@@ -150,20 +150,15 @@ const ServiceDetail: React.FC = () => {
                         ))}
                     </div>
 
-                    {/* Sidebar / Image */}
+                    {/* Sidebar 諮詢區塊 */}
                     <div className="lg:w-1/3 space-y-8">
-                         {service.detailImage && (
-                            <div className="bg-gray-100 rounded-xl overflow-hidden shadow-md sticky top-28">
-                                <img src={service.detailImage} alt={service.title} className="w-full h-auto object-cover" />
-                                <div className="p-6">
-                                    <h4 className="font-bold text-gray-900 mb-2">需要專人諮詢？</h4>
-                                    <p className="text-sm text-gray-600 mb-4">我們提供免費的案場評估與諮詢服務。</p>
-                                    <Link to="/contact" className="block w-full bg-primary hover:bg-emerald-700 text-white text-center py-3 rounded-lg font-bold transition-all">
-                                        立即聯絡我們
-                                    </Link>
-                                </div>
-                            </div>
-                         )}
+                        <div className="bg-gray-100 rounded-xl shadow-md sticky top-28 p-6">
+                            <h4 className="font-bold text-gray-900 mb-2">需要專人諮詢？</h4>
+                            <p className="text-sm text-gray-600 mb-4">我們提供免費的案場評估與諮詢服務。</p>
+                            <Link to="/contact" className="block w-full bg-primary hover:bg-emerald-700 text-white text-center py-3 rounded-lg font-bold transition-all">
+                                立即聯絡我們
+                            </Link>
+                        </div>
                     </div>
                 </div>
 
