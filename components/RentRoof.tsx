@@ -70,7 +70,7 @@ const RentRoof: React.FC = () => {
           <ul className="space-y-4 text-gray-700">
             <li className="flex gap-3">
               <span className="text-primary font-bold shrink-0">・</span>
-              <span><strong>屋頂合法面積</strong>：達 <strong className="text-primary">20 坪以上</strong>（以有使用執照範圍為準）</span>
+              <span><strong>屋頂合法面積</strong>：達 <strong className="text-primary">200 坪以上</strong>（以有使用執照範圍為準）</span>
             </li>
             <li className="flex gap-3">
               <span className="text-primary font-bold shrink-0">・</span>
@@ -80,10 +80,7 @@ const RentRoof: React.FC = () => {
               <span className="text-primary font-bold shrink-0">・</span>
               <span>旁邊無較高的大樓，屋頂無其他遮陰</span>
             </li>
-            <li className="flex gap-3">
-              <span className="text-primary font-bold shrink-0">・</span>
-              <span><strong>集合式住宅</strong>：限 <strong className="text-primary">7 樓以下</strong></span>
-            </li>
+
             <li className="flex gap-3">
               <span className="text-primary font-bold shrink-0">・</span>
               <span>饋線是否足夠（有專人處理）</span>

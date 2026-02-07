@@ -33,7 +33,10 @@ const About: React.FC = () => {
               不管是出租屋頂還是自建電廠，我們從前期評估、設備選型、施工到日後維護都包了，你只要決定要「收租金」還是「自己賣電」就好。
             </p>
             <p className="text-gray-600 mb-8 leading-relaxed">
-              裝好之後我們也會定期幫你看系統狀況、做清洗保養，有問題直接找我們。跟台電、政府那些申請流程，我們有經驗，會幫你跑好。
+              政府機關單位 (台電、能源局) 送件全交由我們團隊申辦到好。
+            </p>
+            <p className="text-gray-600 mb-8 leading-relaxed">
+              案場建置完成後，旭奇會 24 小時由後台監控系統追蹤案場現況及定期清洗模組、保養維護電力系統。
             </p>
 
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
