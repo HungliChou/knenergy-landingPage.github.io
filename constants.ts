@@ -18,6 +18,7 @@ export const NAV_LINKS = [
   { name: "關於旭奇", path: "/#about", type: "hash" },
   { name: "出租屋頂", path: "/rent-roof", type: "page" },
   { name: "自建電廠", path: "/construction", type: "page" },
+  { name: "進行中案場", path: "/ongoing-projects", type: "page" },
   // Services is handled specially in Navbar as a dropdown
   { name: "最新消息", path: "/news", type: "page" },
   { name: "聯絡我們", path: "/contact", type: "page" },
