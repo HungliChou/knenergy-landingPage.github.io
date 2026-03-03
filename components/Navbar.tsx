@@ -91,6 +91,13 @@ const Navbar: React.FC = () => {
             >
               自建電廠
             </Link>
+            {/* 進行中案場 Link */}
+            <Link 
+              to="/ongoing-projects" 
+              className={`text-sm font-medium hover:text-secondary transition-colors ${isScrolled || location.pathname !== '/' ? 'text-gray-700' : 'text-white'}`}
+            >
+              進行中案場
+            </Link>
 
             {/* Services Dropdown */}
             <div className="relative group">
@@ -163,6 +170,13 @@ const Navbar: React.FC = () => {
                 onClick={() => setIsOpen(false)}
               >
                 自建電廠
+              </Link>
+              <Link
+                to="/ongoing-projects"
+                className="block px-3 py-3 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50 border-b border-gray-50"
+                onClick={() => setIsOpen(false)}
+              >
+                進行中案場
               </Link>
               
               {/* Mobile Services Accordion Button */}

@@ -22,39 +22,34 @@ const Partners: React.FC = () => {
                                 售電合作
                             </div>
                             <h3 className="text-3xl font-bold mb-6">旭奇 × 富威電力</h3>
-                            <p className="text-gray-300 mb-6 leading-relaxed">
-                                我們和 <strong className="text-white">富威電力（正崴集團）</strong> 合作，他們是 2024 年售電業第一名的上市公司。
-                                我們手上的太陽能案場，富威保證收購至少 <span className="text-secondary font-bold">90%</span> 的發電量，等於發出來的電有穩定去處。
+
+                            <p className="text-secondary font-semibold mb-2">領航業界的合作夥伴</p>
+                            <p className="text-gray-300 mb-8 leading-relaxed">
+                                我們與 2024 年台灣售電量第一的上市公司——<strong className="text-white">富威電力（正崴集團）</strong> 達成深度合作。本案場發電量由富威電力全面收購，確保電力產出具備極高且穩定的去化管道。
                             </p>
-                            <ul className="space-y-4 mb-10 text-gray-300">
-                                <li className="flex items-start gap-3">
-                                    <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0"></span>
-                                    <span>富威是綠電交易平台，幫企業買綠電、做轉供、申請憑證、用電分析，一條龍服務。</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0"></span>
-                                    <span>台灣很早就能賣綠電給企業的售電業者之一，也是 <strong className="text-white">NVIDIA 在台灣的綠電供應商</strong>。</span>
-                                </li>
-                                <li className="flex items-start gap-3">
-                                    <span className="w-2 h-2 mt-2 rounded-full bg-primary flex-shrink-0"></span>
-                                    <span>用 CPPA（企業購電合約）跟企業簽長約，很多科技大廠像台積電、NVIDIA 都這樣採購綠電。</span>
-                                </li>
-                            </ul>
+
+                            <h4 className="font-bold text-white text-lg mb-2">一站式綠電整合服務</h4>
+                            <p className="text-gray-300 mb-8 leading-relaxed">
+                                富威電力作為全台領先的綠電交易平台，提供企業從綠電採購、電力轉供、憑證申請（T-REC）到用電分析的完整一條龍服務。富威不僅是台灣早期進入綠電市場的售電業者之一，更是 <strong className="text-white">NVIDIA 在台灣的指定綠電供應商</strong>。
+                            </p>
 
                             <div className="bg-white/10 p-8 rounded-xl border-l-4 border-secondary">
-                                <h4 className="font-bold text-white text-xl mb-4">什麼是 CPPA（企業購電合約）？</h4>
-                                <ul className="space-y-3 text-gray-300">
+                                <h4 className="font-bold text-white text-xl mb-2">CPPA（企業購電合約）：國際大廠的標準配置</h4>
+                                <p className="text-gray-300 mb-6 leading-relaxed">
+                                    目前包含 台積電、NVIDIA 在內的國際科技大廠，皆採用 CPPA（Corporate Power Purchase Agreement）模式長期採購綠電，以確保穩定的能源供應：
+                                </p>
+                                <ul className="space-y-4 text-gray-300">
                                     <li className="flex items-start gap-3">
                                         <CheckCircle2 size={18} className="text-secondary flex-shrink-0 mt-1" />
-                                        <span><strong>電價先鎖住：</strong>跟發電方簽長期合約，未來電價怎麼漲，你的採購價已經談好，預算好抓。</span>
+                                        <span><strong className="text-white">避險與成本控管：</strong>簽署長期合約可提前鎖定購電價格，有效對抗未來電價波動風險，協助企業精確掌握長期營運預算。</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <CheckCircle2 size={18} className="text-secondary flex-shrink-0 mt-1" />
-                                        <span><strong>做 ESG、拿綠電憑證：</strong>企業要碳中和、RE100，用綠電就對了，還能拿 T-REC 等憑證。</span>
+                                        <span><strong className="text-white">落實 ESG 與國際接軌：</strong>協助企業達成碳中和（Carbon Neutrality）目標並符合 RE100 規範，確保取得再生能源憑證，提升國際供應鏈競爭力。</span>
                                     </li>
                                     <li className="flex items-start gap-3">
                                         <CheckCircle2 size={18} className="text-secondary flex-shrink-0 mt-1" />
-                                        <span><strong>支持綠能：</strong>長期合約等於給綠電案場穩定收入，有助新案場開發。</span>
+                                        <span><strong className="text-white">支持再生能源發展：</strong>長期購電協議能為綠電案場提供穩定的現金流與收益保障，是支持新能源案場開發與永續轉型的關鍵驅動力。</span>
                                     </li>
                                 </ul>
                             </div>

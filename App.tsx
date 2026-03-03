@@ -10,6 +10,7 @@ import Partners from './components/Partners';
 import Portfolio from './components/Portfolio';
 import HomeOptions from './components/HomeOptions';
 import News from './components/News';
+import OngoingProjects from './components/OngoingProjects';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import ServiceDetail from './components/ServiceDetail';
@@ -55,6 +56,7 @@ const App: React.FC = () => {
             <Route path="/construction" element={<Construction />} />
             <Route path="/services/:id" element={<ServiceDetail />} />
             <Route path="/news" element={<News />} />
+            <Route path="/ongoing-projects" element={<OngoingProjects />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

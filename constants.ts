@@ -1,4 +1,4 @@
-import { Sun, ShieldCheck, Wrench, Leaf, BarChart3, Recycle, FileCheck, HardHat } from 'lucide-react';
+import { Sun, ShieldCheck, Wrench, Leaf, BarChart3, Recycle, FileCheck, HardHat, Bot } from 'lucide-react';
 
 const withBase = (p: string) => `${import.meta.env.BASE_URL}${p.replace(/^\/+/, '')}`;
 
@@ -217,6 +217,40 @@ export const SERVICES = [
     ],
     detailImage: "https://picsum.photos/id/439/800/500",
   },
+  {
+    id: "cleaning-robot",
+    title: "智能清洗機器人",
+    description: "自動化清洗太陽能板，維持模組發電效率。可搭配維運案場，定期清潔、延長設備壽命。",
+    icon: Bot,
+    cardBgImage: "https://images.unsplash.com/photo-1559302504-64aae0d8d671?w=600&q=75",
+    detailTitle: "智能清洗機器人：自動維護，發電不衰減",
+    detailContent: [
+      {
+        subtitle: "為什麼需要清洗太陽能板？",
+        text: "太陽能板長期暴露在戶外，會累積灰塵、鳥糞、花粉、落葉等，遮蔽光線會直接降低發電量。研究顯示，未定期清洗的案場發電損失可達 15～25%。透過智能清洗機器人定期清潔，可維持模組表面透光率，讓電廠在 20 年生命週期內保持穩定產出。"
+      },
+      {
+        subtitle: "實際運作影片",
+        text: "以下為智能清洗機器人於案場實際運作畫面，可點擊播放觀看清洗流程與效果。",
+        video: withBase("official_image/智能清洗機器人.mov"),
+      },
+      {
+        subtitle: "清掃前後對比",
+        text: "左側為清掃前模組表面覆蓋塵垢的狀態，右側為清洗後表面恢復透光、發電效率明顯提升的對比。定期清洗能有效延長設備壽命並維持躉購收益。",
+        image: withBase("official_image/智能清洗機器人清掃前後.png"),
+      },
+      {
+        subtitle: "服務特色",
+        list: [
+          "自動化巡軌清洗，減少人力與高空作業風險。",
+          "可配合維運排程，定期或依監控數據安排清洗。",
+          "適用屋頂型、地面型等案場，提升整體發電效益。",
+          "延長模組使用壽命，維持 20 年躉購期間的穩定收益。",
+        ]
+      },
+    ],
+    detailImage: withBase("official_image/智能清洗機器人清掃前後.png"),
+  },
 ];
 
 export const PROJECTS = [
@@ -269,4 +303,85 @@ export const NEWS_ITEMS = [
     title: "強制設置太陽能條款上路",
     content: "《再生能源發展條例》修法，新建、增建或改建建築面積達300坪以上，未來必須設置太陽能，若不裝設將無法取得建照與使照。"
   }
+];
+
+// 進行中案場（PDF 第 13–17 頁）
+export const ONGOING_PROJECTS = [
+  {
+    id: "standard",
+    title: "標準案場",
+    capacity: "691.53 KW",
+    summary: "本案為新建RC結構建物，棚架式鋼構架設 4.5 米以下、直舖太陽光電板。符合廠主需求及獲得合理分潤。",
+    details: [
+      { label: "建物類型", text: "新建 RC 結構建物" },
+      { label: "廠主需求", text: "屋頂隔熱降溫" },
+      { label: "型態", text: "棚架式，鋼構架設 4.5 米以下、直舖太陽光電板" },
+    ],
+    images: [withBase("official_image/ongoing_projects/標準案場_691.53KW.png")],
+  },
+  {
+    id: "special1",
+    title: "特殊案場 1",
+    capacity: "139.23 KW",
+    summary: "如為特殊案場，我們會依照案場現況為您提供建置方案及解決方法。太陽光電板排佈位置避開違建部分，依法建置合格建築範圍。",
+    details: [
+      { label: "建物類型", text: "RC 結構建物，前段建物屬違建區域" },
+      { label: "廠主需求", text: "屋頂隔熱降溫" },
+      { label: "型態", text: "棚架式，鋼構架設 4.5 米以下、直舖太陽光電板" },
+      { label: "處理方式", text: "太陽光電板排佈位置避開違建部分，依法建置合格建築範圍" },
+    ],
+    images: [withBase("official_image/ongoing_projects/特殊案場1_139.23KW.png")],
+  },
+  {
+    id: "special2",
+    title: "特殊案場 2",
+    capacity: "48.06 KW",
+    summary: "鐵皮浪板建物，平舖式支架間距 30 公分鋪設太陽光電板。由我司出資鋪設全區屋頂新浪板。",
+    details: [
+      { label: "建物類型", text: "鐵皮浪板建物，無太陽能板部分屬違建區域" },
+      { label: "廠主需求", text: "宿舍區域隔熱降溫（排佈為宿舍區）" },
+      { label: "型態", text: "平舖式，支架間距 30 公分，鋪設太陽光電板" },
+      { label: "處理方式", text: "太陽光電板排佈位置避開違建部分，依法建置合格建築範圍；由我司出資鋪設全區屋頂新浪板" },
+    ],
+    images: [withBase("official_image/ongoing_projects/特殊案場2_48.06KW.png")],
+  },
+  {
+    id: "special3",
+    title: "特殊案場 3",
+    capacity: "1087 KW",
+    summary: "RC 結構建物，無太陽能板部分屬排風扇區域。新設頂蓋式鋼構，屋頂修繕防水、抗風 17 級、維修空間與集水再利用。",
+    details: [
+      { label: "建物類型", text: "RC 結構建物，無太陽能板部分屬排風扇區域" },
+      { label: "廠主需求", text: "屋頂防水、限高 4.5 米、抗風 17 級、維修空間、集水再利用" },
+      { label: "型態", text: "新設頂蓋式，鋼構架設 4.5 米以下，鋪設一層浪板後再鋪設太陽光電板" },
+      { label: "處理方式", text: "屋頂修繕防水層、山形設計、技師結構簽證達抗風 17 級、水塔至浪板維修空間 90 公分、設計排水管路" },
+    ],
+    images: [
+      withBase("official_image/ongoing_projects/特殊案場3_1087KW.png"),
+      withBase("official_image/ongoing_projects/特殊案場3_止水敦_1087KW.png"),
+      withBase("official_image/ongoing_projects/特殊案場3_洩水_1087KW.png"),
+      withBase("official_image/ongoing_projects/特殊案場3_頂蓋_1087KW.png"),
+      withBase("official_image/ongoing_projects/特殊案場3_風扇_1087KW.png"),
+    ],
+    imageLabels: ["案場", "止水敦", "洩水", "頂蓋", "風扇"],
+  },
+  {
+    id: "special4",
+    title: "特殊案場 4",
+    capacity: "2200 KW",
+    summary: "鐵皮浪板建物全案滿鋪太陽能板。模組汰舊換新、遮蔭區域以支架撐高與太子樓齊高增加容量，並架設智能機器人每日清洗模組。由我司出資鋪設全區屋頂新浪板。",
+    details: [
+      { label: "建物類型", text: "鐵皮浪板建物，全案滿鋪太陽能板" },
+      { label: "廠主需求", text: "增加發電效益" },
+      { label: "型態", text: "平舖、撐高式" },
+      { label: "處理方式", text: "模組汰舊換新、遮蔭區域以支架撐高鋪設模組與太子樓齊高增加容量，架設智能機器人每日清洗模組；由我司出資鋪設全區屋頂新浪板" },
+    ],
+    images: [
+      withBase("official_image/ongoing_projects/特殊案場4_太子樓_2200KW.png"),
+      withBase("official_image/ongoing_projects/特殊案場4_排佈設計_2200KW.png"),
+      withBase("official_image/ongoing_projects/特殊案場4_現況_2200KW.png"),
+      withBase("official_image/ongoing_projects/特殊案場4_遮蔭模擬_2200KW.png"),
+    ],
+    imageLabels: ["太子樓", "排佈設計", "現況", "遮蔭模擬"],
+  },
 ];

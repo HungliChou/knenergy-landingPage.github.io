@@ -64,6 +64,20 @@ const ServiceDetail: React.FC = () => {
                                     </p>
                                 )}
 
+                                {/* Video Block Render */}
+                                {(block as { video?: string }).video && (
+                                    <div className="my-6 rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-black/5">
+                                        <video
+                                            src={(block as { video?: string }).video}
+                                            controls
+                                            playsInline
+                                            className="w-full h-auto max-h-[480px] object-contain"
+                                        >
+                                            您的瀏覽器不支援影片播放。
+                                        </video>
+                                    </div>
+                                )}
+
                                 {/* Image Block Render (New) */}
                                 {block.image && (
                                     <div className="my-6 rounded-xl overflow-hidden shadow-sm border border-gray-100">
