@@ -25,7 +25,8 @@ const HomeOptions: React.FC = () => {
                 出租閒置屋頂
               </h3>
               <p className="text-gray-600 mb-2">
-                屋頂空著也是空著，租給我們蓋太陽能，你不用出半毛錢，我們來建、我們來維護。
+                您提供屋頂，我們出資建置太陽能，
+                您固定收租金，後續運轉期間維護管理由我們擔負。
               </p>
               <p className="text-primary font-semibold">
                 免費遮陽棚 ＋ 每月穩定租金收入
