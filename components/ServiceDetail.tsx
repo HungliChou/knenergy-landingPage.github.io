@@ -124,11 +124,13 @@ const ServiceDetail: React.FC = () => {
                                                     key={`${normalized.src}-${i}`}
                                                     className="rounded-xl overflow-hidden shadow-sm border border-gray-100 bg-white"
                                                 >
-                                                    <img
-                                                        src={normalized.src}
-                                                        alt={normalized.label || `${block.subtitle}-${i + 1}`}
-                                                        className="w-full h-auto object-cover"
-                                                    />
+                                                    <div className="h-52 sm:h-56 md:h-60 bg-gray-50">
+                                                        <img
+                                                            src={normalized.src}
+                                                            alt={normalized.label || `${block.subtitle}-${i + 1}`}
+                                                            className="w-full h-full object-cover object-center"
+                                                        />
+                                                    </div>
                                                     {normalized.label && (
                                                         <div className="px-4 py-3 text-center text-gray-800 font-semibold border-t border-gray-100 bg-white">
                                                             {normalized.label}
