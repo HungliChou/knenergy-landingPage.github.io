@@ -52,14 +52,46 @@ const ServiceDetail: React.FC = () => {
                         </h2>
 
                         {service.detailContent?.map((block, idx) => (
-                            <div key={idx} className="space-y-4">
-                                <h3 className="text-xl font-bold text-primary flex items-center gap-2">
-                                    <div className="w-2 h-6 bg-primary/20 rounded-full"></div>
-                                    {block.subtitle}
+                            <div
+                                key={idx}
+                                className={[
+                                    "space-y-4",
+                                    block.subtitle === "板材使用"
+                                        ? "rounded-2xl border border-secondary/30 bg-secondary/5 p-6 shadow-sm ring-1 ring-secondary/10"
+                                        : "",
+                                ].join(" ").trim()}
+                            >
+                                <h3
+                                    className={[
+                                        "text-xl font-bold flex items-center gap-2",
+                                        block.subtitle === "板材使用" ? "text-gray-900" : "text-primary",
+                                    ].join(" ")}
+                                >
+                                    <div
+                                        className={[
+                                            "w-2 h-6 rounded-full",
+                                            block.subtitle === "板材使用" ? "bg-secondary" : "bg-primary/20",
+                                        ].join(" ")}
+                                    ></div>
+                                    <span className={block.subtitle === "板材使用" ? "text-2xl font-extrabold tracking-wide" : ""}>
+                                        {block.subtitle}
+                                    </span>
+                                    {block.subtitle === "板材使用" && (
+                                        <span className="ml-2 inline-flex items-center rounded-full bg-secondary/15 px-3 py-1 text-sm font-bold text-secondary">
+                                            重點
+                                        </span>
+                                    )}
                                 </h3>
                                 
                                 {block.text && (
-                                    <p className="text-gray-600 leading-8 whitespace-pre-line text-lg">
+                                    <p
+                                        className={[
+                                            "leading-8 whitespace-pre-line text-lg",
+                                            block.subtitle === "板材使用"
+                                                ? "text-gray-900 font-semibold"
+                                                : "text-gray-600",
+                                        ].join(" ")}
+                                    >
                                         {block.text}
                                     </p>
                                 )}
