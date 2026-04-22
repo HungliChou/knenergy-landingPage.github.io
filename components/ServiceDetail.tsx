@@ -3,7 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import { SERVICES } from '../constants';
 import { ArrowLeft, CheckCircle2 } from 'lucide-react';
 
-type ImageItem = { src: string; label?: string };
+type ImageItem = { src: string; label?: string; position?: string };
 
 const ServiceDetail: React.FC = () => {
   const { id } = useParams<{ id: string }>();
@@ -128,7 +128,8 @@ const ServiceDetail: React.FC = () => {
                                                         <img
                                                             src={normalized.src}
                                                             alt={normalized.label || `${block.subtitle}-${i + 1}`}
-                                                            className="w-full h-full object-cover object-center"
+                                                            className="w-full h-full object-cover"
+                                                            style={{ objectPosition: normalized.position ?? "center" }}
                                                         />
                                                     </div>
                                                     {normalized.label && (

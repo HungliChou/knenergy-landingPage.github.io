@@ -77,8 +77,8 @@ export const SERVICES = [
         subtitle: "板材使用",
         text: "品牌：燁輝、盛餘",
         images: [
-          { src: withBase("official_image/燁輝.jpg"), label: "燁輝" },
-          { src: withBase("official_image/盛餘.jpg"), label: "盛餘" }
+          { src: withBase("official_image/燁輝.jpg"), label: "燁輝", position: "left bottom" },
+          { src: withBase("official_image/盛餘.jpg"), label: "盛餘", position: "center top" }
         ]
       },
       {
