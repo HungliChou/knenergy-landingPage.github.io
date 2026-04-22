@@ -39,7 +39,7 @@ const Footer: React.FC = () => {
           {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-2 text-white">
-                <div className="w-11 h-11 flex items-center justify-center">
+                <div className="w-14 h-14 flex items-center justify-center">
                   <img
                     src={`${import.meta.env.BASE_URL}official_image/logo-blk.png`}
                     alt={`${COMPANY_INFO.name} Logo`}
