@@ -76,11 +76,6 @@ const ServiceDetail: React.FC = () => {
                                     <span className={block.subtitle === "板材使用" ? "text-2xl font-extrabold tracking-wide" : ""}>
                                         {block.subtitle}
                                     </span>
-                                    {block.subtitle === "板材使用" && (
-                                        <span className="ml-2 inline-flex items-center rounded-full bg-secondary/15 px-3 py-1 text-sm font-bold text-secondary">
-                                            重點
-                                        </span>
-                                    )}
                                 </h3>
                                 
                                 {block.text && (
