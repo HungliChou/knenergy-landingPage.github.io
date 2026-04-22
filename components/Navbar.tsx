@@ -50,7 +50,7 @@ const Navbar: React.FC = () => {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-            <div className="w-10 h-10 flex items-center justify-center">
+            <div className="w-12 h-12 flex items-center justify-center">
               <img
                 src={`${import.meta.env.BASE_URL}official_image/logo-blk.png`}
                 alt={`${COMPANY_INFO.name} Logo`}
