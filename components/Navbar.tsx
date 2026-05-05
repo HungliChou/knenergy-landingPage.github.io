@@ -47,10 +47,10 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${isScrolled || location.pathname !== '/' ? 'bg-white/95 shadow-md backdrop-blur-sm py-2' : 'bg-white/10 backdrop-blur-md py-4'}`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-16">
+        <div className="flex justify-between items-center h-28">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0 flex items-center gap-2 cursor-pointer" onClick={() => window.scrollTo(0,0)}>
-            <div className="w-14 h-14 flex items-center justify-center">
+            <div className="w-28 h-28 flex items-center justify-center">
               <img
                 src={`${import.meta.env.BASE_URL}official_image/logo-blk.png`}
                 alt={`${COMPANY_INFO.name} Logo`}
