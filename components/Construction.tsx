@@ -5,6 +5,12 @@ import { Link } from 'react-router-dom';
 const Construction: React.FC = () => {
     return (
         <section className="pt-32 pb-20 bg-white min-h-screen">
+            <title>自建太陽光電廠｜投資建置與售電服務 - 旭奇能源 KW Energy</title>
+            <meta name="description" content="自建太陽光電廠，投資建置 + 20 年售電收益。旭奇能源提供日照評估、結構簽證、文件申請、台電併聯與長期維運監控一條龍服務。" />
+            <link rel="canonical" href="https://www.kwenergy.com.tw/construction" />
+            <meta property="og:title" content="自建太陽光電廠｜投資建置與售電服務 - 旭奇能源" />
+            <meta property="og:description" content="自建太陽光電廠，投資建置 + 20 年售電收益，一條龍 EPC 服務。" />
+            <meta property="og:url" content="https://www.kwenergy.com.tw/construction" />
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
                 <div className="mb-8">

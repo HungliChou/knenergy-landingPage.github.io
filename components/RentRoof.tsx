@@ -41,6 +41,12 @@ const requiredDocs = [
 const RentRoof: React.FC = () => {
   return (
     <section className="pt-32 pb-24 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
+      <title>屋頂出租太陽能｜零成本 20 年穩定租金 - 旭奇能源 KW Energy</title>
+      <meta name="description" content="把閒置屋頂出租給旭奇能源，零成本投資、20 年穩定租金收益，同時享有頂樓隔熱、屋頂耐用、結構安全等多項效益。免費評估線上洽詢。" />
+      <link rel="canonical" href="https://www.kwenergy.com.tw/rent-roof" />
+      <meta property="og:title" content="屋頂出租太陽能｜零成本 20 年穩定租金 - 旭奇能源" />
+      <meta property="og:description" content="把閒置屋頂出租給旭奇能源，零成本投資、20 年穩定租金收益。" />
+      <meta property="og:url" content="https://www.kwenergy.com.tw/rent-roof" />
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <Link

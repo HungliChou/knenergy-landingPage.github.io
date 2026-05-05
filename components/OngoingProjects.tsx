@@ -25,6 +25,12 @@ function renderWithSmartRobotLink(text: string, keyPrefix: string): React.ReactN
 const OngoingProjects: React.FC = () => {
   return (
     <section className="pt-32 pb-20 bg-white min-h-screen">
+      <title>進行中案場 - 旭奇能源 KW Energy</title>
+      <meta name="description" content="旭奇能源全台進行中與已完工太陽光電案場一覽。彰化和美、溪湖、福興、鹿港等實績，包含智能機器人清洗維護紀錄。" />
+      <link rel="canonical" href="https://www.kwenergy.com.tw/ongoing-projects" />
+      <meta property="og:title" content="進行中案場 - 旭奇能源" />
+      <meta property="og:description" content="旭奇能源全台太陽光電案場實績一覽。" />
+      <meta property="og:url" content="https://www.kwenergy.com.tw/ongoing-projects" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="mb-8">
           <Link to="/" className="inline-flex items-center text-gray-500 hover:text-primary transition-colors">

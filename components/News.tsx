@@ -6,6 +6,12 @@ import { Link } from 'react-router-dom';
 const News: React.FC = () => {
   return (
     <section className="pt-32 pb-20 bg-white min-h-screen">
+      <title>最新消息 - 旭奇能源 KW Energy</title>
+      <meta name="description" content="旭奇能源最新公司消息、案場啟用、產業動態與綠能政策更新。掌握太陽光電市場第一手資訊。" />
+      <link rel="canonical" href="https://www.kwenergy.com.tw/news" />
+      <meta property="og:title" content="最新消息 - 旭奇能源" />
+      <meta property="og:description" content="旭奇能源最新公司消息、案場啟用、產業動態。" />
+      <meta property="og:url" content="https://www.kwenergy.com.tw/news" />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="mb-8">

@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation, useNavigate } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -31,6 +31,21 @@ const ScrollToTop = () => {
   return null;
 };
 
+// Backward compatibility: redirect legacy "#/path" URLs (from previous HashRouter) to clean paths
+const LegacyHashRedirect = () => {
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    const hash = window.location.hash;
+    if (hash.startsWith('#/')) {
+      const target = hash.slice(1);
+      navigate(target, { replace: true });
+    }
+  }, [navigate]);
+
+  return null;
+};
+
 // The Home Page Component assembled from sections
 const Home = () => (
   <>
@@ -46,6 +61,7 @@ const Home = () => (
 const App: React.FC = () => {
   return (
     <Router>
+      <LegacyHashRedirect />
       <ScrollToTop />
       <div className="min-h-screen font-sans bg-white selection:bg-primary selection:text-white">
         <Navbar />

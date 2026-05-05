@@ -6,8 +6,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
-      // GitHub Pages 會以 /<repo>/ 提供靜態檔案；用相對 base 可同時支援 user page / project page
-      base: './',
+      // 已綁定 custom domain (www.kwenergy.com.tw)，部署在根路徑；BrowserRouter 需要絕對 base
+      base: '/',
       server: {
         port: 3000,
         host: '0.0.0.0',

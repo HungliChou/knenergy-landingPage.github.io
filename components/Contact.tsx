@@ -37,8 +37,43 @@ const Contact: React.FC = () => {
 
   return (
     <section className="pt-32 pb-24 bg-gradient-to-br from-gray-50 to-gray-100 min-h-screen">
+      <title>聯絡我們｜02-2243-5888 - 旭奇能源 KW Energy</title>
+      <meta
+        name="description"
+        content={`聯絡旭奇能源 KW Energy。電話 ${COMPANY_INFO.phone}，地址 ${COMPANY_INFO.address}。歡迎屋主、企業洽詢屋頂出租、自建電廠、儲能與維運服務。`}
+      />
+      <link rel="canonical" href="https://www.kwenergy.com.tw/contact" />
+      <meta property="og:title" content="聯絡我們 - 旭奇能源 KW Energy" />
+      <meta property="og:description" content="電話 02-2243-5888 - 旭奇能源 KW Energy。屋頂出租、自建電廠、儲能與維運免費諮詢。" />
+      <meta property="og:url" content="https://www.kwenergy.com.tw/contact" />
+
+      {/* JSON-LD: LocalBusiness for Google Business / Map cards */}
+      <script type="application/ld+json">
+        {JSON.stringify({
+          '@context': 'https://schema.org',
+          '@type': 'LocalBusiness',
+          name: COMPANY_INFO.name,
+          alternateName: [COMPANY_INFO.englishName, 'KW Energy'],
+          url: 'https://www.kwenergy.com.tw/contact',
+          image: 'https://www.kwenergy.com.tw/official_image/logo-blk.png',
+          telephone: '+886-2-2243-5888',
+          faxNumber: '+886-2-2243-5189',
+          email: COMPANY_INFO.email,
+          taxID: COMPANY_INFO.taxID,
+          address: {
+            '@type': 'PostalAddress',
+            streetAddress: '中山路二段332巷13號9樓',
+            addressLocality: '中和區',
+            addressRegion: '新北市',
+            postalCode: '23556',
+            addressCountry: 'TW',
+          },
+          areaServed: 'TW',
+        })}
+      </script>
+
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         <div className="mb-8">
              <Link to="/" className="inline-flex items-center text-gray-500 hover:text-primary transition-colors">
                 <ArrowLeft size={16} className="mr-2" /> 回首頁

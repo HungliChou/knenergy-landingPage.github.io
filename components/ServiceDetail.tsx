@@ -14,9 +14,17 @@ const ServiceDetail: React.FC = () => {
   }
 
   const Icon = service.icon;
+  const pageUrl = `https://www.kwenergy.com.tw/services/${service.id}`;
+  const pageTitle = `${service.title} - 旭奇能源 KW Energy`;
 
   return (
     <div className="pt-24 pb-20 bg-gray-50 min-h-screen">
+      <title>{pageTitle}</title>
+      <meta name="description" content={service.description} />
+      <link rel="canonical" href={pageUrl} />
+      <meta property="og:title" content={pageTitle} />
+      <meta property="og:description" content={service.description} />
+      <meta property="og:url" content={pageUrl} />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         {/* Breadcrumb / Back */}
